@@ -7,7 +7,7 @@ Follow the instructions here to exec perfect our project :D .
 - [Requeriments](#Requeriments)
 - [Exec](#Exec)
 - [Tools](#Tools)
-- [Team](#Team)
+- [Team](#Team <3)
 
 ### Clone
 - Clone the repository in your computer : ```git clone https://github.com/Murielson/break-worlds.git ```
