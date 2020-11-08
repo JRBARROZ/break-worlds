@@ -1,6 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Tava tentando criar uma classe "bg" ali pra colocar a o gif no fundo
+mas não consegui! tentem ai */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+    font-family: sans-serif;
+}
+.bg{
+    background-image: url('fundo.gif'); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h2{
+    color: #fff;
+    font-size: 2em;
 }
 table {
     margin-top: 20px;

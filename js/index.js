@@ -104,7 +104,7 @@ app.get('/', function(req, res, next) {
 	for (var i = 0; i < arraySession.length; i++) {
 		returnTable += "<tr>" 
 		for (var j = 0; j < arraySession[i].length; j++) {
-			returnTable +=  `<td onclick="changePiece(${i}, ${j})" style="${arraySession[i][j].style}">${i} - ${j}</td>`
+			returnTable +=  `<td onclick="changePiece(${i}, ${j})" style="${arraySession[i][j].style}"></td>`
 		}
 		returnTable += "</tr>" 
 	}
@@ -149,5 +149,5 @@ app.get('/get/*', function(req, res, next) {
 });
 
 app.listen(3000, () => {
-  console.log('Escutando localhost:3000');
+  console.log('Executando em...localhost:3000');
 })
