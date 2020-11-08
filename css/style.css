@@ -6,17 +6,19 @@ body {
     flex-direction: column;
     align-items: center;
     background: #000000;
-    font-family: sans-serif;
-}
-.bg{
-    background-image: url('fundo.gif'); 
+    background-image: url(../image/fundo.gif);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: sans-serif;
 }
 h2{
     color: #fff;
     font-size: 2em;
+}
+*{
+    margin: 0;
+    padding: 0;
 }
 table {
     margin-top: 20px;
@@ -26,10 +28,11 @@ table {
     border-spacing: 0px;
     border-color: grey;
 }
+*
 #grade {
     height: 200px;
     width: 300px;
-    margin: 0 auto;
+    margin: 10% auto;
 }
 
 #grade table td {
