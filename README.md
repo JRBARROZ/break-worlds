@@ -7,7 +7,7 @@ Follow the instructions here to exec perfect our project :D .
 - [Requeriments](#Requeriments)
 - [Exec](#Exec)
 - [Tools](#Tools)
-- [Team](#Team <3)
+- [Team](#Team)
 
 ### Clone
 - Clone the repository in your computer : ```git clone https://github.com/Murielson/break-worlds.git ```
@@ -36,7 +36,7 @@ $ nodemon . / nodemon index.js
 
 - Email : monitoriadigitalsuporte@gmail.com -->
 
-## Team <3
+## Team
 
 | <a href="https://github.com/Murielson" target="_blank">Murielson</a> | <a href="https://github.com/ijbsilva" target="_blank">Ismael</a> | <a href="https://github.com/JulianaMelo10" target="_blank">Juliana</a> | <a href="https://github.com/herica-cy" target="_blank">Herica</a> | <a href="https://github.com/Weslley-dev" target="_blank">Weslley</a> 
 | :---: |:---:| :---:| :---:| :---:|
