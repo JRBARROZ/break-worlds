@@ -2,7 +2,7 @@
 ![BreakTudo](https://user-images.githubusercontent.com/40250320/98471584-1ee06700-21cc-11eb-9fb4-00c1dbdf2adb.png)
 
 ```diff
-@@Starting@@
++ Starting
 ```
 Follow the instructions here to exec perfect our project :D .
 > if u want select one session.
@@ -38,7 +38,7 @@ $ nodemon . / nodemon index.js
 <!-- ## Suporte
 
 - Email : monitoriadigitalsuporte@gmail.com -->
-
+![alt text](https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/source.gif "Praise the sun!")  
 ## Team
 
 | <a href="https://github.com/Murielson" target="_blank">Murielson</a> | <a href="https://github.com/ijbsilva" target="_blank">Ismael</a> | <a href="https://github.com/JulianaMelo10" target="_blank">Juliana</a> | <a href="https://github.com/herica-cy" target="_blank">Herica</a> | <a href="https://github.com/Weslley-dev" target="_blank">Weslley</a> 
