@@ -3,34 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title> Break-Worlds - Game </title>
+    <title>Break-Worlds Menu</title>
 </head>
-<body>
-    <div id="grade">
-        <table>
-            __Teste__
-        </table>
-            __Win__
-    </div>
-    <script>
-        var choosed1 = 0;  // /0/0
-        var choosed2 = 0; //  /1/1
-        // var fullPieces = /0/0/1/1
-        function changePiece(line, column){
-            let fullPieces;
-            if (choosed1 == 0){
-                choosed1 = `/${line}/${column}`;
-                console.log("Escolhida "+ choosed1);
-            } else if (choosed2 == 0){
-                choosed2 = `/${line}/${column}`;
-                fullPieces = choosed1 + choosed2;
-                console.log("Escolhida "+ choosed2);
-                choosed1 = 0;
-                choosed2 = 0;
-                window.location.replace('/get'+ fullPieces);
-            }
+<style>
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    background-image: url('/image/fundo6.gif');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+@font-face {
+        font-family:'BreakWorlds';
+        src: url('fonts/bungee/fonts/Bungee_Web/BungeeLayers/BungeeLayers-Outline.woff') format('woff');
+    }
+    h2{
+        text-shadow: 2px -2px 0px rgba(0, 163, 231, 1);
+        font-family:'BreakWorlds';
+        color: white;
+}
+    h1{
+        text-shadow: 2px -2px 0px rgba(0, 163, 231, 1);
+        font-family:'BreakWorlds';
+        color:blueviolet;
+        font-size: 2em;
+    }
+    .container-head{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        padding-left: 50px;
+    }
+    .container-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .container-menu ul li {
+        text-shadow: 2px -2px 0px rgba(0, 163, 231, 1);
+        font-family: 'BreakWorlds';
+        color: white;
+        list-style-type: none;
+        margin-top: 25px;
+        font-size: 50px;
+        border: 5px dotted blueviolet;
+        padding: 20px 50px;
+        margin-left: 20px;
+        display:inline; 
+        transition: 1s;
+    }
+    a:visited{
+        color: inherit;
+    }
+    a{
+        outline:none;
+        text-decoration: none;
+    }
+    .container-menu ul li:hover{
+        background-color: blueviolet;
+        transition: 1s;
+    }
+    @media only screen and (max-width: 600px) {
+        .container-menu ul li{
+            display: block;
         }
-    </script>
+        h1{
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+    }
+    .content{
+        display: none;
+    }
+    .gif{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-top: 300px;
+        position:absolute;
+    }
+
+</style>
+<body onload="time()">
+    <div class="gif" id="gif">
+        <img src="image/loading.gif" alt="">
+        <h2>Loading ...</h2>
+    </div>
+    <div class="container-head" >
+        <h1>Break-Worlds</h1>
+    </div>
+    <div class="content" id="content">
+        <div class="container-menu" id="menu">
+            <ul>
+                <a href="/jogar"><li>Jogar</li></a>
+                <a href="/sobre"><li>Sobre</li></a>
+                <a href="/ajuda"><li>Ajuda</li></a>
+            </ul>
+        </div>
+    </div>
 </body>
+<script>
+    function time(){
+        setTimeout(function(){ 
+            document.getElementById('gif').style.display = "none";
+            document.getElementById('content').style.display = "block";
+        }, 3000);
+    }
+</script>
 </html>

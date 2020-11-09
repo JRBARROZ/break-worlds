@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Jogo - BreakWorlds</title>
+</head>
+<body>
+
+    <h1>Break-worlds - Puzzle Game </h1>
+    <div id="grade">
+        <table>
+            __Teste__
+        </table>
+            __Win__
+    </div>
+    <script>
+        var choosed1 = 0;  // /0/0
+        var choosed2 = 0; //  /1/1
+        // var fullPieces = /0/0/1/1
+        function changePiece(line, column){
+            let fullPieces;
+            if (choosed1 == 0){
+                choosed1 = `/${line}/${column}`;
+                console.log("Escolhida "+ choosed1);
+            } else if (choosed2 == 0){
+                choosed2 = `/${line}/${column}`;
+                fullPieces = choosed1 + choosed2;
+                console.log("Escolhida "+ choosed2);
+                choosed1 = 0;
+                choosed2 = 0;
+                window.location.replace('/get'+ fullPieces);
+            }
+        }
+        document.body.addEventListener("wheel", e=>{
+            if(e.ctrlKey)
+            event.preventDefault();//prevent zoom
+        });
+
+    </script>
+
+ <h3>
+    The Best Puzzle In The World 
+ </h3>
+</body>
+</html>

@@ -1,8 +1,11 @@
 /**
- Break-Worlds Puzzle Game
-
- Grupo: Weslley Félix, Ismael Jefte, Jonathas Barros e Juliana Maria.
-
+ *
+ * Instituto Federal de Educação, Ciência e Tecnologia - IFPE
+ * Curso: Sistemas para Internet / Informática para Internet
+ * Introdução à Programação Imperativa
+ * Professor: Allan Lima - allan.lima@igarassu.ifpe.edu.br
+ * Alunos: Weslley Félix, Jhonatas Barros, Ismael Jefté e Juliana Maria
+ *
  */
  
 const express = require('express');
@@ -15,13 +18,46 @@ const fs = require('fs');
 
 var app = express();
 app.use('/css',express.static('../css'));
+app.use('/fonts',express.static('../fonts'));
 app.use('/image',express.static('../image'));
 app.use(session({ secret: 'XXassasas¨¨$', resave: false, saveUninitialized: true }));
 
 // entre em localhost:3000 para escrever os dados na sessao
 app.get('/', function(req, res, next) {
-	// se o array nao estiver na sessao, coloque-o na sessao
+	fs.readFile("../index.html", "UTF-8", (err, date) =>{
+		res.send(date);
+	});
+});
+app.get('/sobre', function(req, res, next) {
+	fs.readFile("../sobre.html", "UTF-8", (err, date) =>{
+		res.send(date);
+	});
+});
+app.get('/ajuda', function(req, res, next) {
+	fs.readFile("../ajuda.html", "UTF-8", (err, date) =>{
+		res.send(date);
+	});
+});
+// entre em localhost:3000/nome para ver os dados escritos na sessao
+app.get('/get/*', function(req, res, next) {
+    var arraySessionChanged = req.session.tabuleiro;
+	var obj = req.url.split('/');
 
+	var linha = obj[2];
+	var coluna = obj[3];
+	var linha2 = obj[4];
+	var coluna2 = obj[5];
+
+	temp = arraySessionChanged[linha][coluna];
+	arraySessionChanged[linha][coluna] = arraySessionChanged[linha2][coluna2];
+	arraySessionChanged[linha2][coluna2] = temp;
+	temp = null;
+	req.session.tabuleiro = arraySessionChanged;
+	res.redirect('/jogar')
+
+});
+app.get('/jogar', function(req, res, next) {
+	// se o array nao estiver na sessao, coloque-o na sessao
 	if (req.session.tabuleiro == null) {
 		//a[0][0]
 		//a[0][1]
@@ -117,37 +153,18 @@ app.get('/', function(req, res, next) {
 		}		
 	}
 	var returnWin = "<div id='win'></div>";
-	fs.readFile("../index.html", "UTF-8", (err, date) =>{
+	fs.readFile("../jogar.html", "UTF-8", (err, date) =>{
 		if(cont === 24){
-			var replaced = date.replace('__Teste__', returnWin).replace('__Win__', "");
+			var replaced = date.replace('__Teste__', returnWin).replace('__Win__', " ");
 		}else{
 			var replaced = date.replace('__Teste__', returnTable).replace('__Win__', " ");
 		}
 		res.statusCode = 200;
+
 		res.send(replaced);
 	});
 });
 
-
-// entre em localhost:3000/nome para ver os dados escritos na sessao
-app.get('/get/*', function(req, res, next) {
-    var arraySessionChanged = req.session.tabuleiro;
-	var obj = req.url.split('/');
-
-	var linha = obj[2];
-	var coluna = obj[3];
-	var linha2 = obj[4];
-	var coluna2 = obj[5];
-
-	temp = arraySessionChanged[linha][coluna];
-	arraySessionChanged[linha][coluna] = arraySessionChanged[linha2][coluna2];
-	arraySessionChanged[linha2][coluna2] = temp;
-	temp = null;
-	req.session.tabuleiro = arraySessionChanged;
-	res.redirect('/')
-
-});
-
 app.listen(3000, () => {
-  console.log('Executando em...localhost:3000');
+  console.log('Escutando localhost:3000');
 })
