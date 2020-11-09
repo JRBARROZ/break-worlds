@@ -7,7 +7,7 @@ Follow the instructions here to exec perfect our project :D .
 > if u want select one session.
 
 - [Requeriments](#Requeriments)
-- [Exec](#Exec)
+- [Execution](#Execution)
 - [Tools](#Tools)
 - [Team](#Team)
 
