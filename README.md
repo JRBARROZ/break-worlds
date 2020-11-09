@@ -37,7 +37,9 @@ $ nodemon . / nodemon index.js
 <!-- ## Suporte
 
 - Email : monitoriadigitalsuporte@gmail.com -->
-![alt text](https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/source.gif "Praise the sun!")  
+<!--![alt text](https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/source.gif "Praise the sun!")  -->
+<img src= "https://media.giphy.com/media/3ov9k0Ziq50EoOuWRi/source.gif" width="200">
+
 ## Team
 
 | <a href="https://github.com/Murielson" target="_blank">Murielson</a> | <a href="https://github.com/ijbsilva" target="_blank">Ismael</a> | <a href="https://github.com/JulianaMelo10" target="_blank">Juliana</a> | <a href="https://github.com/herica-cy" target="_blank">Herica</a> | <a href="https://github.com/Weslley-dev" target="_blank">Weslley</a> 
