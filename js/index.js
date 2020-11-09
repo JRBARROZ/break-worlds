@@ -59,42 +59,6 @@ app.get('/get/*', function(req, res, next) {
 app.get('/jogar', function(req, res, next) {
 	// se o array nao estiver na sessao, coloque-o na sessao
 	if (req.session.tabuleiro == null) {
-		//a[0][0]
-		//a[0][1]
-		// var array =[
-		// 	[							//i		//j								//j											//i
-		// 		`<td onclick="changePiece(0, 0)" style="background-position-x:${((0*25/(6-1))*100)}%;background-position-y:${((0*25/(4-1))*100)}%;"></td>`, 
-		// 		`<td onclick="changePiece(0, 1)" style="background-position-x:${((1*25/(6-1))*100)}%;background-position-y:${((0*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(0, 2)" style="background-position-x:${((2*25/(6-1))*100)}%;background-position-y:${((0*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(0, 3)" style="background-position-x:${((3*25/(6-1))*100)}%;background-position-y:${((0*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(0, 4)" style="background-position-x:${((4*25/(6-1))*100)}%;background-position-y:${((0*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(0, 5)" style="background-position-x:${((5*25/(6-1))*100)}%;background-position-y:${((0*25/(4-1))*100)}%;"></td>`
-		// 	],
-		// 	[
-		// 		`<td onclick="changePiece(1, 0)" style="background-position-x:${((0*25/(6-1))*100)}%;background-position-y:${((1*25/(4-1))*100)}%;"></td>`, 
-		// 		`<td onclick="changePiece(1, 1)" style="background-position-x:${((1*25/(6-1))*100)}%;background-position-y:${((1*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(1, 2)" style="background-position-x:${((2*25/(6-1))*100)}%;background-position-y:${((1*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(1, 3)" style="background-position-x:${((3*25/(6-1))*100)}%;background-position-y:${((1*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(1, 4)" style="background-position-x:${((4*25/(6-1))*100)}%;background-position-y:${((1*25/(4-1))*100)}%;"></td>`,	
-		// 		`<td onclick="changePiece(1, 5)" style="background-position-x:${((5*25/(6-1))*100)}%;background-position-y:${((1*25/(4-1))*100)}%;"></td>`	
-		// 	],
-		// 	[
-		// 		`<td onclick="changePiece(2, 0)" style="background-position-x:${((0*25/(6-1))*100)}%;background-position-y:${((2*25/(4-1))*100)}%;"></td>`, 
-		// 		`<td onclick="changePiece(2, 1)" style="background-position-x:${((1*25/(6-1))*100)}%;background-position-y:${((2*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(2, 2)" style="background-position-x:${((2*25/(6-1))*100)}%;background-position-y:${((2*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(2, 3)" style="background-position-x:${((3*25/(6-1))*100)}%;background-position-y:${((2*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(2, 4)" style="background-position-x:${((4*25/(6-1))*100)}%;background-position-y:${((2*25/(4-1))*100)}%;"></td>`,	
-		// 		`<td onclick="changePiece(2, 5)" style="background-position-x:${((5*25/(6-1))*100)}%;background-position-y:${((2*25/(4-1))*100)}%;"></td>`	
-		// 	],
-		// 	[
-		// 		`<td onclick="changePiece(3, 0)" style="background-position-x:${((0*25/(6-1))*100)}%;background-position-y:${((3*25/(4-1))*100)}%;"></td>`, 
-		// 		`<td onclick="changePiece(3, 1)" style="background-position-x:${((1*25/(6-1))*100)}%;background-position-y:${((3*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(3, 2)" style="background-position-x:${((2*25/(6-1))*100)}%;background-position-y:${((3*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(3, 3)" style="background-position-x:${((3*25/(6-1))*100)}%;background-position-y:${((3*25/(4-1))*100)}%;"></td>`,
-		// 		`<td onclick="changePiece(3, 4)" style="background-position-x:${((4*25/(6-1))*100)}%;background-position-y:${((3*25/(4-1))*100)}%;"></td>`,	
-		// 		`<td onclick="changePiece(3, 5)" style="background-position-x:${((5*25/(6-1))*100)}%;background-position-y:${((3*25/(4-1))*100)}%;"></td>`	
-		// 	]
-		// ];
 		
 		function shuffle(array) {
 			var currentIndex = array.length, temporaryValue, randomIndex;
