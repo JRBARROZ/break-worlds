@@ -109,7 +109,12 @@ body{
         setTimeout(function(){ 
             document.getElementById('gif').style.display = "none";
             document.getElementById('content').style.display = "block";
-        }, 3000);
+        }, 3000);       
     }
+
+    document.body.addEventListener("wheel", e=>{
+            if(e.ctrlKey)
+            event.preventDefault();//prevent zoom
+        });
 </script>
 </html>

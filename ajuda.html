@@ -10,7 +10,17 @@
         O jogo consiste em mover peças para formar a imagem do quebra cabeça, clique com o botão esquerdo do mouse sobre a peça
         e escolha para qual espaço ela vai.
     </h1>
+
+    <script> 
+        document.body.addEventListener("wheel", e=>{
+           if(e.ctrlKey)
+           event.preventDefault();//prevent zoom
+       });
+
+    </script>
+
 </body>
+
 <style>
     body{
     display: flex;
