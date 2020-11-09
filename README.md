@@ -1,9 +1,8 @@
 # BW - Break Worlds - The Best Puzzle Ever
 ![BreakTudo](https://user-images.githubusercontent.com/40250320/98471584-1ee06700-21cc-11eb-9fb4-00c1dbdf2adb.png)
 
-```diff
-## STARTING...
-```
+## STARTING
+
 Follow the instructions here to exec perfect our project :D .
 > if u want select one session.
 
@@ -25,7 +24,7 @@ Follow the instructions here to exec perfect our project :D .
 # npm install -g nodemon
 ```
 
-### Exec
+### Execution
 > After install , go to Js folder and exec this : 
 ```
 $ nodemon . / nodemon index.js
